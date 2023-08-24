@@ -6,7 +6,7 @@ interface Props {
 }
 
 const CakeLayer = ({ cakeLayer }: Props) => {
-  return <li className="CakeLayer" style={}></li>;
+  return <li className="CakeLayer"></li>;
 };
 
 export default CakeLayer;
