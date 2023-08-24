@@ -6,6 +6,7 @@ import Layer from "./model/Layer";
 
 function App() {
   const [cakeArray, setCakeArray] = useState<Layer[]>([]);
+  console.log(cakeArray);
   return (
     <div className="App">
       <Cake cakeArray={cakeArray} />
