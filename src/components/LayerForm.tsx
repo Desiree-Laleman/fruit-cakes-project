@@ -1,17 +1,21 @@
 import { useState } from "react";
 import "./LayerForm.css";
 
-const LayerForm = () => {
+interface Props {
+  setHidden: (boolean: boolean) => void;
+}
+
+const LayerForm = ({ setHidden }: Props) => {
   const [color, setColor] = useState("");
-  const [height, setHeight] = useState("");
-  const [width, setWidth] = useState("");
+  const [height, setHeight] = useState("0.5");
+  const [width, setWidth] = useState("1");
 
   return (
     <form
       className="LayerForm"
       onSubmit={(e) => {
         e.preventDefault();
-        console.log(height, width);
+        console.log(height, width, color);
       }}
     >
       <select
@@ -31,7 +35,7 @@ const LayerForm = () => {
         <option value="pink">Pink</option>
         <option value="brown">Brown</option>
       </select>
-      <label htmlFor="height">Height: {height}</label>
+      <label htmlFor="height">Height: {Number(height).toFixed(1)}</label>
       <input
         type="range"
         min="0.5"
@@ -55,6 +59,9 @@ const LayerForm = () => {
       />
 
       <button>Save</button>
+      <button type="button" onClick={() => setHidden(false)}>
+        Cancel
+      </button>
     </form>
   );
 };

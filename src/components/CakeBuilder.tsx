@@ -1,11 +1,16 @@
+import Layer from "../model/Layer";
 import "./CakeBuilder.css";
 import LayerAdd from "./LayerAdd";
 import LayerBuilder from "./LayerBuilder";
 
-const CakeBuilder = () => {
+interface Props {
+  cakeArray: Layer[];
+}
+
+const CakeBuilder = ({ cakeArray }: Props) => {
   return (
     <div className="CakeBuilder">
-      <LayerBuilder />
+      <LayerBuilder cakeArray={cakeArray} />
       <LayerAdd />
     </div>
   );
