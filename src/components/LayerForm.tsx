@@ -1,21 +1,30 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import "./LayerForm.css";
+import Layer from "../model/Layer";
 
 interface Props {
   setHidden: (boolean: boolean) => void;
+  addLayer: (layer: Layer) => void;
 }
 
-const LayerForm = ({ setHidden }: Props) => {
+const LayerForm = ({ setHidden, addLayer }: Props) => {
   const [color, setColor] = useState("");
   const [height, setHeight] = useState("0.5");
   const [width, setWidth] = useState("1");
+
+  const handelSubmit = (e: FormEvent): void => {
+    e.preventDefault();
+    addLayer({ color, height: Number(height), width: Number(width) });
+    setColor("");
+    setHeight("0.5");
+    setWidth("1");
+  };
 
   return (
     <form
       className="LayerForm"
       onSubmit={(e) => {
-        e.preventDefault();
-        console.log(height, width, color);
+        handelSubmit(e);
       }}
     >
       <select

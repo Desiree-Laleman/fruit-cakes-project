@@ -11,11 +11,19 @@ function App() {
     setCakeArray((prev) => [layer, ...prev]);
   };
 
-  console.log(cakeArray);
+  const deleteLayer = (index: number): void => {
+    setCakeArray((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
+  };
+
+  // console.log(cakeArray);
   return (
     <div className="App">
       <Cake cakeArray={cakeArray} />
-      <CakeBuilder cakeArray={cakeArray} />
+      <CakeBuilder
+        cakeArray={cakeArray}
+        deleteLayer={deleteLayer}
+        addLayer={addLayer}
+      />
     </div>
   );
 }
