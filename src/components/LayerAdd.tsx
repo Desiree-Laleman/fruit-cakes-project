@@ -4,14 +4,10 @@ import "./LayerAdd.css";
 import LayerForm from "./LayerForm";
 
 interface Props {
-  cakeArray: Layer[];
+  addLayer: (layer: Layer) => void;
 }
 
-const LayerAdd = () => {
-  // const addLayer = ({ cakeArray }: Props) => {
-  //   cakeArray.map((item) => item);
-  // };
-
+const LayerAdd = ({ addLayer }: Props) => {
   const [hidden, setHidden] = useState(false);
 
   return (
@@ -19,7 +15,7 @@ const LayerAdd = () => {
       <button className="LayerAdd" onClick={() => setHidden((prev) => !prev)}>
         Add Layer
       </button>
-      {hidden && <LayerForm setHidden={setHidden} />}
+      {hidden && <LayerForm setHidden={setHidden} addLayer={addLayer} />}
     </>
   );
 };

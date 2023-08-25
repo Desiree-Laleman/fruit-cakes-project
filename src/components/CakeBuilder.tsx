@@ -5,13 +5,15 @@ import LayerBuilder from "./LayerBuilder";
 
 interface Props {
   cakeArray: Layer[];
+  deleteLayer: (index: number) => void;
+  addLayer: (layer: Layer) => void;
 }
 
-const CakeBuilder = ({ cakeArray }: Props) => {
+const CakeBuilder = ({ cakeArray, deleteLayer, addLayer }: Props) => {
   return (
     <div className="CakeBuilder">
-      <LayerBuilder cakeArray={cakeArray} />
-      <LayerAdd />
+      <LayerAdd addLayer={addLayer} />
+      <LayerBuilder cakeArray={cakeArray} deleteLayer={deleteLayer} />
     </div>
   );
 };
