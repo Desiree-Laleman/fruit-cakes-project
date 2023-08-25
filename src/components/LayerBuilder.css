@@ -1,0 +1,13 @@
+.layer-info {
+  display: flex;
+  justify-content: space-between;
+  border: solid black 1px;
+}
+
+#colorContainer {
+  flex: 1;
+}
+
+#heightWidthContainer {
+  flex: 1;
+}

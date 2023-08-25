@@ -14,7 +14,7 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
       <ul className="LayerBuilder">
         {cakeArray.map((item, index) => (
           <li className="layer-info" key={index} style={{ listStyle: "none" }}>
-            <div>
+            <div id="colorContainer">
               <p>
                 Color:{" "}
                 {item.color === "#fff"
@@ -34,9 +34,32 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
                   : ""}
               </p>
             </div>
-            <div>
-              <p>Height: {item.height}</p>
-              <p>Width: {item.width}</p>
+            <div id="heightWidthContainer">
+              <div>
+                <label htmlFor="height">
+                  Height: {Number(item.height / 40).toFixed(1)}
+                </label>
+                <input
+                  type="range"
+                  min="0.5"
+                  step="0.5"
+                  max="10"
+                  value={item.height / 40}
+                  className="slider"
+                />
+              </div>
+              <div>
+                <label htmlFor="width">
+                  Width: {(item.width / 40).toFixed(1)}
+                </label>
+                <input
+                  type="range"
+                  min="1"
+                  max="10"
+                  value={item.width / 40}
+                  className="slider"
+                />
+              </div>
             </div>
             <button onClick={() => deleteLayer(index)}>DELETE</button>
           </li>

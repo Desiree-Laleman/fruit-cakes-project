@@ -71,11 +71,16 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
         id="width"
         onChange={(e) => setWidth(e.target.value)}
       />
-
-      <button>Save</button>
-      <button type="button" onClick={() => setHidden(false)}>
-        Cancel
-      </button>
+      <div className="scButtonContainer">
+        <button id="saveButton">Save</button>
+        <button
+          id="cancelButton"
+          type="button"
+          onClick={() => setHidden(false)}
+        >
+          Cancel
+        </button>
+      </div>
     </form>
   );
 };
