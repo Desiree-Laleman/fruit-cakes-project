@@ -12,9 +12,13 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
   const [height, setHeight] = useState("0.5");
   const [width, setWidth] = useState("1");
 
-  const handelSubmit = (e: FormEvent): void => {
+  const handleSubmit = (e: FormEvent): void => {
     e.preventDefault();
-    addLayer({ color, height: Number(height), width: Number(width) });
+    addLayer({
+      color,
+      height: Number(height) * 40,
+      width: Number(width) * 40,
+    });
     setColor("");
     setHeight("0.5");
     setWidth("1");
@@ -24,10 +28,11 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
     <form
       className="LayerForm"
       onSubmit={(e) => {
-        handelSubmit(e);
+        handleSubmit(e);
       }}
     >
       <select
+        required
         name="color"
         id="color"
         value={color}
@@ -36,13 +41,13 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
         <option value="" disabled>
           Pick a color
         </option>
-        <option value="blue">Blue</option>
-        <option value="purple">Purple</option>
-        <option value="yellow">Yellow</option>
-        <option value="green">Green</option>
-        <option value="white">White</option>
-        <option value="pink">Pink</option>
-        <option value="brown">Brown</option>
+        <option value="#73DBF0">Blue</option>
+        <option value="#B57EDC">Purple</option>
+        <option value="#FFE5B4">Yellow</option>
+        <option value="#D0F0C0">Green</option>
+        <option value="#fff">White</option>
+        <option value="#EE9EB8">Pink</option>
+        <option value="#84563C">Brown</option>
       </select>
       <label htmlFor="height">Height: {Number(height).toFixed(1)}</label>
       <input

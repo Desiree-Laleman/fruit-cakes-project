@@ -7,7 +7,15 @@ interface Props {
 }
 
 const Cake = ({ cakeArray }: Props) => {
-  return <div className="Cake">{/* <CakeLayer /> */}</div>;
+  return (
+    <div className="Cake">
+      <ul>
+        {cakeArray.map((item, index) => (
+          <CakeLayer layer={item} key={index} />
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default Cake;

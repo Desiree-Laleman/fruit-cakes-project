@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .App .Cake {
+  flex: 1;
+}
+
+.App .CakeBuilder {
+  flex: 1;
+} */
