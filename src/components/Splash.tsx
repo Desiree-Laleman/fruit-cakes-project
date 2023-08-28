@@ -1,13 +1,16 @@
 import { useState } from "react";
 import "./Splash.css";
 
-const Splash = () => {
-  const [hidden, setHidden] = useState(true);
+interface Props {
+  setShowSplash: (boolean: boolean) => void;
+}
+
+const Splash = ({ setShowSplash }: Props) => {
   return (
     <div className="Splash">
       <section className="splash-page">
         <h1>Fruitcakes!</h1>
-        <button onClick={() => setHidden(false)}>Build a Cake!</button>
+        <button onClick={() => setShowSplash(false)}>Build a Cake!</button>
       </section>
     </div>
   );
