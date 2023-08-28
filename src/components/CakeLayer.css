@@ -1,0 +1,10 @@
+.CakeLayer {
+  border-radius: 50% / 31.5px;
+  margin: -31.5px 0;
+  padding: 31.5px 0;
+  border-bottom: 2px solid rgba(100, 100, 100, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50% / 31.5px;
+  transform: translateZ(0);
+}
