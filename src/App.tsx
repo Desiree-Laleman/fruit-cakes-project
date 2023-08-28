@@ -23,13 +23,20 @@ function App() {
   return (
     <div className="App">
       {showSplash && <Splash setShowSplash={setShowSplash} />}
-      {!showSplash && <Header />}
-      <Cake cakeArray={cakeArray} />
-      <CakeBuilder
-        cakeArray={cakeArray}
-        deleteLayer={deleteLayer}
-        addLayer={addLayer}
-      />
+
+      {!showSplash && (
+        <>
+          <Header />{" "}
+          <div id="content-container">
+            <Cake cakeArray={cakeArray} />
+            <CakeBuilder
+              cakeArray={cakeArray}
+              deleteLayer={deleteLayer}
+              addLayer={addLayer}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }

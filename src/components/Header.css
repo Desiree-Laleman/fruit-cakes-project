@@ -1,4 +1,15 @@
 .Header {
-  background-color: purple;
   background-image: url("http://localhost:3000/assets/falling-fruit.gif");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header h1 {
+  font-family: "Fresh Fruit", sans-serif;
+  font-size: 60px;
+  color: orange;
+  -webkit-text-stroke: 2px black;
+  opacity: 0.7;
+  margin: 15px;
 }
