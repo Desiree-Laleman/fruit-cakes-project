@@ -3,6 +3,8 @@ import "./App.css";
 import Cake from "./components/Cake";
 import CakeBuilder from "./components/CakeBuilder";
 import Layer from "./model/Layer";
+import { secureHeapUsed } from "crypto";
+import Splash from "./components/Splash";
 
 function App() {
   const [cakeArray, setCakeArray] = useState<Layer[]>([]);
@@ -18,6 +20,7 @@ function App() {
   // console.log(cakeArray);
   return (
     <div className="App">
+      <Splash />
       <Cake cakeArray={cakeArray} />
       <CakeBuilder
         cakeArray={cakeArray}
