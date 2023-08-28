@@ -8,6 +8,7 @@ import Splash from "./components/Splash";
 
 function App() {
   const [cakeArray, setCakeArray] = useState<Layer[]>([]);
+  const [showSplash, setShowSplash] = useState(true);
 
   const addLayer = (layer: Layer): void => {
     setCakeArray((prev) => [layer, ...prev]);
@@ -20,7 +21,8 @@ function App() {
   // console.log(cakeArray);
   return (
     <div className="App">
-      <Splash />
+      {showSplash && <Splash setShowSplash={setShowSplash} />}
+
       <Cake cakeArray={cakeArray} />
       <CakeBuilder
         cakeArray={cakeArray}

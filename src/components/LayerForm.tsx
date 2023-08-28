@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import "./LayerForm.css";
 import Layer from "../model/Layer";
+// import freshFruit from '../components/assets/fresh-fruit.png';
 
 interface Props {
   setHidden: (boolean: boolean) => void;
@@ -9,6 +10,7 @@ interface Props {
 
 const LayerForm = ({ setHidden, addLayer }: Props) => {
   const [color, setColor] = useState("");
+  const [decoration, setDecoration] = useState("");
   const [height, setHeight] = useState("0.5");
   const [width, setWidth] = useState("1");
 
@@ -39,7 +41,7 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
         onChange={(e) => setColor(e.target.value)}
       >
         <option value="" disabled>
-          Pick a color
+          Pick A Flavor
         </option>
         <option value="#73DBF0">Blueberry</option>
         <option value="#B57EDC">Lavender</option>
@@ -49,6 +51,19 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
         <option value="#EE9EB8">Raspberry</option>
         <option value="#84563C">Chocolate</option>
       </select>
+
+      <select
+        name="decoration"
+        id="decoration"
+        value={decoration}
+        onChange={(e) => setDecoration(e.target.value)}
+      >
+        <option value="" disabled>
+          Optional Decoration
+        </option>
+        <option value="freshBerries">Fresh Berries</option>
+      </select>
+
       <label htmlFor="height">Height: {Number(height).toFixed(1)}</label>
       <input
         type="range"

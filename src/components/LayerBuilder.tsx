@@ -18,19 +18,19 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
               <p>
                 Color:{" "}
                 {item.color === "#fff"
-                  ? "White"
+                  ? "Vanilla"
                   : item.color === "#73DBF0"
-                  ? "Blue"
+                  ? "Blueberry"
                   : item.color === "#B57EDC"
-                  ? "Purple"
+                  ? "Lavender"
                   : item.color === "#FFE5B4"
-                  ? "Yellow"
+                  ? "Star-Fruit"
                   : item.color === "#D0F0C0"
-                  ? "Green"
+                  ? "Mint"
                   : item.color === "#EE9EB8"
-                  ? "Pink"
+                  ? "Raspberry"
                   : item.color === "#84563C"
-                  ? "Brown"
+                  ? "Chocolate"
                   : ""}
               </p>
             </div>
