@@ -41,13 +41,13 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
         <option value="" disabled>
           Pick a color
         </option>
-        <option value="#73DBF0">Blue</option>
-        <option value="#B57EDC">Purple</option>
-        <option value="#FFE5B4">Yellow</option>
-        <option value="#D0F0C0">Green</option>
-        <option value="#fff">White</option>
-        <option value="#EE9EB8">Pink</option>
-        <option value="#84563C">Brown</option>
+        <option value="#73DBF0">Blueberry</option>
+        <option value="#B57EDC">Lavender</option>
+        <option value="#FFE5B4">Star-Fruit</option>
+        <option value="#D0F0C0">Mint</option>
+        <option value="#fff">Vanilla</option>
+        <option value="#EE9EB8">Raspberry</option>
+        <option value="#84563C">Chocolate</option>
       </select>
       <label htmlFor="height">Height: {Number(height).toFixed(1)}</label>
       <input
