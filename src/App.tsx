@@ -5,6 +5,7 @@ import CakeBuilder from "./components/CakeBuilder";
 import Layer from "./model/Layer";
 import { secureHeapUsed } from "crypto";
 import Splash from "./components/Splash";
+import Header from "./components/Header";
 
 function App() {
   const [cakeArray, setCakeArray] = useState<Layer[]>([]);
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className="App">
       {showSplash && <Splash setShowSplash={setShowSplash} />}
-
+      {!showSplash && <Header />}
       <Cake cakeArray={cakeArray} />
       <CakeBuilder
         cakeArray={cakeArray}

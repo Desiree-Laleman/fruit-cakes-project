@@ -16,7 +16,7 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
           <li className="layer-info" key={index} style={{ listStyle: "none" }}>
             <div id="colorContainer">
               <p>
-                Color:{" "}
+                Flavor:{" "}
                 {item.color === "#fff"
                   ? "Vanilla"
                   : item.color === "#73DBF0"
@@ -33,6 +33,17 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
                   ? "Chocolate"
                   : ""}
               </p>
+              <div id="decorationContainer">
+                <p>
+                  Decoration:{" "}
+                  {item.decoration ===
+                  "http://localhost:3000/assets/Strawberry-Jam.png"
+                    ? "Jam Drip"
+                    : item.decoration === "strawberryVine"
+                    ? "Strawberry Vine"
+                    : "None"}
+                </p>
+              </div>
             </div>
             <div id="heightWidthContainer">
               <div>

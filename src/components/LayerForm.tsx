@@ -1,7 +1,7 @@
 import { FormEvent, useState } from "react";
 import "./LayerForm.css";
 import Layer from "../model/Layer";
-// import freshFruit from '../components/assets/fresh-fruit.png';
+import freshFruit from "./assets/fresh-fruit.png";
 
 interface Props {
   setHidden: (boolean: boolean) => void;
@@ -18,6 +18,7 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
     e.preventDefault();
     addLayer({
       color,
+      decoration,
       height: Number(height) * 40,
       width: Number(width) * 40,
     });
@@ -61,7 +62,12 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
         <option value="" disabled>
           Optional Decoration
         </option>
-        <option value="freshBerries">Fresh Berries</option>
+        <option value="http://localhost:3000/assets/Strawberry-Jam.png">
+          Jam Drip
+        </option>
+        <option value="http://localhost:3000/assets/strawberry-vine.png">
+          Strawberry Vine
+        </option>
       </select>
 
       <label htmlFor="height">Height: {Number(height).toFixed(1)}</label>

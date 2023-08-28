@@ -17,7 +17,9 @@ const CakeLayer = ({ layer, zIndex }: Props) => {
         width: layer.width,
         zIndex: zIndex,
       }}
-    ></li>
+    >
+      {layer.decoration && <img src={layer.decoration} alt="decoration" />}
+    </li>
   );
 };
 
