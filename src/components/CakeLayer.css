@@ -1,4 +1,5 @@
 .CakeLayer {
+  position: relative;
   border-radius: 50% / 31.5px;
   margin: -31.5px 0;
   padding: 31.5px 0;
@@ -7,4 +8,9 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50% / 31.5px;
   transform: translateZ(0);
+}
+.CakeLayer img {
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
 }

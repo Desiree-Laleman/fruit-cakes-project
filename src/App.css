@@ -10,10 +10,15 @@
     display: flex;
     flex-direction: row-reverse;
   }
+  .App .Header {
+    /* position: absolute;
+    width: 100%; */
+  }
   .App .Cake {
     flex: 2;
   }
   .App .CakeBuilder {
     flex: 1;
+    /* margin-top: 80px; */
   }
 }
