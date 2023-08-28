@@ -1,12 +1,19 @@
 .App {
   display: flex;
   flex-direction: column;
+  background-color: whitesmoke;
+  height: 100vh;
 }
 
-/* .App .Cake {
-  flex: 1;
+@media only screen and (min-width: 768px) {
+  .App {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .App .Cake {
+    flex: 2;
+  }
+  .App .CakeBuilder {
+    flex: 1;
+  }
 }
-
-.App .CakeBuilder {
-  flex: 1;
-} */

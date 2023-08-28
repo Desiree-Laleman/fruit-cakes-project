@@ -1,7 +1,14 @@
+.LayerBuilder {
+  width: 100%;
+  margin: 0px;
+}
+
 .layer-info {
   display: flex;
   justify-content: space-between;
   border: solid black 1px;
+  padding: 10px 20px 10px 20px;
+  background-color: lightgreen;
 }
 
 #colorContainer {
@@ -10,4 +17,12 @@
 
 #heightWidthContainer {
   flex: 1;
+}
+
+.LayerBuilder button {
+  border: none;
+  background-color: lightcoral;
+}
+.LayerBuilder button:hover {
+  background-color: red;
 }
