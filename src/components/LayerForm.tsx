@@ -62,7 +62,7 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
         <option value="" disabled>
           Optional Decoration
         </option>
-        <option value="http://localhost:3000/assets/Strawberry-Jam.png">
+        <option value="http://localhost:3000/assets/jam-drops.png">
           Jam Drip
         </option>
         <option value="http://localhost:3000/assets/strawberry-vine.png">

@@ -5,20 +5,25 @@
   height: 100vh;
 }
 
+.App .Cake {
+  height: 45vh;
+}
+
+.App .CakeBuilder {
+  height: 45vh;
+}
+
 @media only screen and (min-width: 768px) {
-  .App {
+  .App #content-container {
     display: flex;
     flex-direction: row-reverse;
+    height: 100%;
   }
-  .App .Header {
-    /* position: absolute;
-    width: 100%; */
-  }
+
   .App .Cake {
     flex: 2;
   }
   .App .CakeBuilder {
     flex: 1;
-    /* margin-top: 80px; */
   }
 }

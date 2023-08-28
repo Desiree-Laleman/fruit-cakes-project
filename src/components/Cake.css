@@ -5,6 +5,7 @@
   flex: 1;
   overflow-y: scroll;
   height: 100%;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 .Cake ul {
