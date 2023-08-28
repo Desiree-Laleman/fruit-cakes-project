@@ -3,9 +3,10 @@ import "./CakeLayer.css";
 
 interface Props {
   layer: Layer;
+  zIndex: number;
 }
 
-const CakeLayer = ({ layer }: Props) => {
+const CakeLayer = ({ layer, zIndex }: Props) => {
   return (
     <li
       className="CakeLayer"
@@ -14,6 +15,7 @@ const CakeLayer = ({ layer }: Props) => {
         backgroundColor: layer.color,
         height: layer.height,
         width: layer.width,
+        zIndex: zIndex,
       }}
     ></li>
   );

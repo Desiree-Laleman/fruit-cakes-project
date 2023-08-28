@@ -9,9 +9,14 @@ interface Props {
 const Cake = ({ cakeArray }: Props) => {
   return (
     <div className="Cake">
+      <div className="cake-stand" />
       <ul>
         {cakeArray.map((item, index) => (
-          <CakeLayer layer={item} key={index} />
+          <CakeLayer
+            layer={item}
+            key={index}
+            zIndex={cakeArray.length - index}
+          />
         ))}
       </ul>
     </div>

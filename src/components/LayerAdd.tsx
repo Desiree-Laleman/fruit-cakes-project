@@ -10,12 +10,19 @@ interface Props {
 const LayerAdd = ({ addLayer }: Props) => {
   const [hidden, setHidden] = useState(false);
 
+  const handleLayerSubmit = (layer: Layer) => {
+    setHidden(false); // Hide the form after submission
+    addLayer(layer); // Call the addLayer function from CakeBuilder
+  };
+
   return (
     <>
       <button className="LayerAdd" onClick={() => setHidden((prev) => !prev)}>
         Add Layer
       </button>
-      {hidden && <LayerForm setHidden={setHidden} addLayer={addLayer} />}
+      {hidden && (
+        <LayerForm setHidden={setHidden} addLayer={handleLayerSubmit} />
+      )}
     </>
   );
 };
