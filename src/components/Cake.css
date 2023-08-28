@@ -1,20 +1,16 @@
 .Cake {
-  flex: 1;
   display: flex;
   justify-content: center;
-  /* background: rgb(238, 174, 202);
-  background: radial-gradient(
-    circle,
-    rgba(238, 174, 202, 1) 0%,
-    rgba(193, 148, 233, 1) 100%
-  ); */
-  /* background-image: url("public/assets/fruit-background.jpg"); */
+  align-items: center;
+  flex: 1;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .Cake ul {
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  padding: 0px;
+  margin: 0px;
 }

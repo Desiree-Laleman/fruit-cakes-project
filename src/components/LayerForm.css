@@ -4,10 +4,25 @@
   align-items: center;
   flex-direction: column;
   border: solid black 1px;
+  background-color: rgb(180, 180, 245);
 }
 
 #saveButton,
 #cancelButton {
   margin: 0 25px;
   padding: 5px 25px;
+}
+
+#saveButton {
+  background-color: greenyellow;
+}
+#saveButton:hover {
+  background-color: rgb(0, 200, 0);
+}
+
+#cancelButton {
+  background-color: lightcoral;
+}
+#cancelButton:hover {
+  background-color: red;
 }
