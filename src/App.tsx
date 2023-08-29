@@ -19,6 +19,8 @@ function App() {
     setCakeArray((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
   };
 
+  const cakeHeight = cakeArray.reduce((ac, cv) => cv.height + ac, 0);
+
   // console.log(cakeArray);
   return (
     <div className="App">
@@ -28,7 +30,7 @@ function App() {
         <>
           <Header />{" "}
           <div id="content-container">
-            <Cake cakeArray={cakeArray} />
+            <Cake cakeArray={cakeArray} cakeHeight={cakeHeight} />
             <CakeBuilder
               cakeArray={cakeArray}
               deleteLayer={deleteLayer}
