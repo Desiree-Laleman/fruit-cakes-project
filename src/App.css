@@ -3,6 +3,8 @@
   flex-direction: column;
   background-color: whitesmoke;
   height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 .App .Cake {
@@ -17,13 +19,17 @@
   .App #content-container {
     display: flex;
     flex-direction: row-reverse;
-    height: 100%;
+    height: calc(100vh - 60px);
   }
 
   .App .Cake {
     flex: 2;
+    height: 100%;
+    overflow-y: scroll;
   }
   .App .CakeBuilder {
     flex: 1;
+    height: 100%;
+    overflow-y: scroll;
   }
 }
