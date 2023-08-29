@@ -1,7 +1,6 @@
 import { FormEvent, useState } from "react";
 import "./LayerForm.css";
 import Layer from "../model/Layer";
-import freshFruit from "./assets/fresh-fruit.png";
 
 interface Props {
   setHidden: (boolean: boolean) => void;
@@ -44,32 +43,45 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
         <option value="" disabled>
           Pick A Flavor
         </option>
-        <option value="#73DBF0">Blueberry</option>
-        <option value="#B57EDC">Lavender</option>
-        <option value="#FFE5B4">Star-Fruit</option>
-        <option value="#D0F0C0">Mint</option>
-        <option value="#fff">Vanilla</option>
-        <option value="#EE9EB8">Raspberry</option>
+        <option value="#FFE5B4">Banana Cream Pie</option>
+        <option value="#4F86F7">Blueberry</option>
         <option value="#84563C">Chocolate</option>
+        <option value="#B57EDC">Grape</option>
+        <option value="#C7B6DC">Lavender</option>
+        <option value="#F6E199">Lemon Meringue</option>
+        <option value="#D0F0C0">Mint</option>
+        <option value="#FBAA60">Orange</option>
+        <option value="#EE9EB8">Raspberry</option>
+        <option value="#E37383">Watermelon</option>
+        <option value="#fff">Vanilla</option>
       </select>
-
-      <select
-        name="decoration"
-        id="decoration"
-        value={decoration}
-        onChange={(e) => setDecoration(e.target.value)}
-      >
-        <option value="" disabled>
-          Optional Decoration
-        </option>
-        <option value="http://localhost:3000/assets/jam-drops.png">
-          Jam Drip
-        </option>
-        <option value="http://localhost:3000/assets/strawberry-vine.png">
-          Strawberry Vine
-        </option>
-      </select>
-
+      <p>
+        *Please select a height of 4.5 or more to add decoration (5.5 for
+        Citrus){" "}
+      </p>
+      {Number(height) >= 4.5 && (
+        <select
+          name="decoration"
+          id="decoration"
+          value={decoration}
+          onChange={(e) => setDecoration(e.target.value)}
+        >
+          <option value="" disabled>
+            Optional Decoration
+          </option>
+          <option value="http://localhost:3000/assets/strawberry-vine.png">
+            Strawberry Vine
+          </option>
+          <option value="http://localhost:3000/assets/grape-vine.png">
+            Grape Vine
+          </option>
+          {Number(height) >= 5.5 && (
+            <option value="http://localhost:3000/assets/citrus-fruits.png">
+              Citrus Fruits
+            </option>
+          )}
+        </select>
+      )}
       <label htmlFor="height">Height: {Number(height).toFixed(1)}</label>
       <input
         type="range"

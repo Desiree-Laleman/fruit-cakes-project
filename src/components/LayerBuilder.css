@@ -1,3 +1,8 @@
+h2 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 100;
+}
+
 .LayerBuilder {
   width: 100%;
   margin: 0px;
@@ -9,6 +14,8 @@
   border: solid black 1px;
   padding: 10px 20px 10px 20px;
   background-color: lightgreen;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #colorContainer {
@@ -17,12 +24,25 @@
 
 #heightWidthContainer {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .LayerBuilder button {
   border: none;
   background-color: lightcoral;
+  padding: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .LayerBuilder button:hover {
-  background-color: red;
+  background-color: rgb(246, 66, 66);
 }

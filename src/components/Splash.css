@@ -29,6 +29,8 @@
   font-size: 4vw;
   font-weight: bold;
   border-radius: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #99c974;
   cursor: pointer;
   color: orange;

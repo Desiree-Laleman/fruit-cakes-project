@@ -3,26 +3,50 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: solid black 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: rgb(180, 180, 245);
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 90%;
+}
+
+.LayerForm p {
+  font-size: 14px;
+}
+
+.LayerForm label {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+.LayerForm button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 15px;
+}
+
+#decoration {
+  margin-bottom: 10px;
 }
 
 #saveButton,
 #cancelButton {
-  margin: 0 25px;
+  margin: 10px 10px 0 10px;
   padding: 5px 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #saveButton {
   background-color: greenyellow;
 }
 #saveButton:hover {
-  background-color: rgb(0, 200, 0);
+  background-color: rgb(69, 207, 69);
 }
 
 #cancelButton {
   background-color: lightcoral;
 }
 #cancelButton:hover {
-  background-color: red;
+  background-color: rgb(246, 66, 66);
 }

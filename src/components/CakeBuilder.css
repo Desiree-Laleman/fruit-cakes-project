@@ -5,15 +5,18 @@
   flex: 1;
   overflow-y: scroll;
   height: 100%;
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
 .CakeBuilder .LayerAdd {
   background-color: rgb(255, 255, 157);
   border: none;
   padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .CakeBuilder .LayerAdd:hover {
-  background-color: rgb(255, 255, 60);
+  background-color: rgb(233, 233, 63);
 }
 
 .CakeBuilder h2 {

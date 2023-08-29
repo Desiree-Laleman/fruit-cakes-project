@@ -10,7 +10,7 @@ interface Props {
 const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
   return (
     <>
-      <h2>Layer Information</h2>
+      <h2>Layer Details</h2>
       <ul className="LayerBuilder">
         {cakeArray.map((item, index) => (
           <li className="layer-info" key={index} style={{ listStyle: "none" }}>
@@ -21,10 +21,18 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
                   ? "Vanilla"
                   : item.color === "#73DBF0"
                   ? "Blueberry"
+                  : item.color === "#FBAA60"
+                  ? "Orange"
+                  : item.color === "#F6E199"
+                  ? "Lemon Meringue"
+                  : item.color === "#E37383"
+                  ? "Watermelon"
                   : item.color === "#B57EDC"
+                  ? "Grape"
+                  : item.color === "#C7B6DC"
                   ? "Lavender"
                   : item.color === "#FFE5B4"
-                  ? "Star-Fruit"
+                  ? "Banana Cream Pie"
                   : item.color === "#D0F0C0"
                   ? "Mint"
                   : item.color === "#EE9EB8"
@@ -36,13 +44,15 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
               <div id="decorationContainer">
                 <p>
                   Decoration:{" "}
-                  {item.decoration === "http://localhost:3000/assets/jam.png" &&
-                  item.height >= 5
-                    ? "Jam Drip"
-                    : item.decoration ===
-                        "http://localhost:3000/assets/strawberry-vine.png" &&
-                      item.height >= 4
+                  {item.decoration ===
+                  "http://localhost:3000/assets/strawberry-vine.png"
                     ? "Strawberry Vine"
+                    : item.decoration ===
+                      "http://localhost:3000/assets/grape-vine.png"
+                    ? "Grape Vine"
+                    : item.decoration ===
+                      "http://localhost:3000/assets/citrus-fruits.png"
+                    ? "Citrus Fruits"
                     : "None"}
                 </p>
               </div>
@@ -74,7 +84,9 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
                 />
               </div>
             </div>
-            <button onClick={() => deleteLayer(index)}>DELETE</button>
+            <div className="button-container">
+              <button onClick={() => deleteLayer(index)}>DELETE</button>
+            </div>
           </li>
         ))}
       </ul>
