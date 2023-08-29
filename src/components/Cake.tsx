@@ -8,11 +8,15 @@ interface Props {
 }
 
 const Cake = ({ cakeArray, cakeHeight }: Props) => {
+  console.log(cakeHeight);
   return (
     <div className="Cake">
       <div className="cake-stand" />
-      {/* {cakeHeight >= 30 && style={scale: 0.5} */}
-      <ul>
+      <ul
+        className={
+          cakeHeight >= 25 ? "scale-desktop" : cakeHeight >= 12 ? "scale" : ""
+        }
+      >
         {cakeArray.map((item, index) => (
           <CakeLayer
             layer={item}

@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 50vh;
+    min-height: 100%;
     background-image: url("http://localhost:3000/assets/fruit-background.jpg");
     opacity: 0.2;
   }
@@ -25,4 +25,22 @@
   align-items: center;
   padding: 0px;
   margin: 0px;
+}
+
+.Cake .scale {
+  scale: 0.5;
+}
+
+.Cake .scale-desktop {
+  scale: 0.35;
+}
+
+@media only screen and (min-width: 768px) {
+  .Cake .scale {
+    scale: 1;
+  }
+
+  .Cake .scale-desktop {
+    scale: 0.75;
+  }
 }

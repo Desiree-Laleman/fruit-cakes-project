@@ -19,7 +19,7 @@ function App() {
     setCakeArray((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
   };
 
-  const cakeHeight = cakeArray.reduce((ac, cv) => cv.height + ac, 0);
+  const cakeHeight = cakeArray.reduce((ac, cv) => cv.height / 40 + ac, 0);
 
   // console.log(cakeArray);
   return (
