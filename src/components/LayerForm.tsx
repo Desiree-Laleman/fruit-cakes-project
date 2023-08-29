@@ -57,7 +57,7 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
       </select>
       <p>
         *Please select a height of 4.5 or more to add decoration (5.5 for
-        Citrus){" "}
+        Citrus)
       </p>
       {Number(height) >= 4.5 && (
         <select

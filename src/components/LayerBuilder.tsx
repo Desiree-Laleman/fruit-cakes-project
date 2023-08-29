@@ -43,7 +43,7 @@ const LayerBuilder = ({ cakeArray, deleteLayer }: Props) => {
               </p>
               <div id="decorationContainer">
                 <p>
-                  Decoration:{" "}
+                  Decoration:
                   {item.decoration ===
                   "http://localhost:3000/assets/strawberry-vine.png"
                     ? "Strawberry Vine"

@@ -26,7 +26,7 @@ h2 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .button-container {
@@ -45,4 +45,9 @@ h2 {
 
 .LayerBuilder button:hover {
   background-color: rgb(246, 66, 66);
+}
+
+.LayerBuilder li {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 17px;
 }
