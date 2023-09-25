@@ -1,6 +1,6 @@
 .Splash {
   position: relative;
-  background-image: url("http://localhost:3000/assets/falling-fruit.gif");
+  background-image: url("../images/falling-fruit.gif");
   background-size: 175%;
   background-repeat: no-repeat;
   width: 100%;
@@ -40,12 +40,12 @@
 }
 
 .splash-page button:hover {
-  background-image: url("http://localhost:3000/assets/funfetti.gif");
+  background-image: url("../images/funfetti.gif");
 }
 
 @media only screen and (min-width: 768px) {
   .Splash {
-    background-image: url("http://localhost:3000/assets/falling-fruit.gif");
+    background-image: url("../images/falling-fruit.gif");
     background-size: cover;
   }
 

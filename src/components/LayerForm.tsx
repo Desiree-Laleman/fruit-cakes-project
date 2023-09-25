@@ -1,6 +1,9 @@
 import { FormEvent, useState } from "react";
 import "./LayerForm.css";
 import Layer from "../model/Layer";
+import strawberry from "../images/strawberry-vine.png";
+import citrus from "../images/citrus-fruits.png";
+import grape from "../images/grape-vine.png";
 
 interface Props {
   setHidden: (boolean: boolean) => void;
@@ -69,16 +72,10 @@ const LayerForm = ({ setHidden, addLayer }: Props) => {
           <option value="" disabled>
             Optional Decoration
           </option>
-          <option value="http://localhost:3000/assets/strawberry-vine.png">
-            Strawberry Vine
-          </option>
-          <option value="http://localhost:3000/assets/grape-vine.png">
-            Grape Vine
-          </option>
+          <option value={strawberry}>Strawberry Vine</option>
+          <option value={grape}>Grape Vine</option>
           {Number(height) >= 5.5 && (
-            <option value="http://localhost:3000/assets/citrus-fruits.png">
-              Citrus Fruits
-            </option>
+            <option value={citrus}>Citrus Fruits</option>
           )}
         </select>
       )}
